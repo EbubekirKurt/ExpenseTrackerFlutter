@@ -24,17 +24,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expense Tracker'),
+        title: const Text('Expense Tracker'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
+            const Text(
               'Welcome to Expense Tracker!',
               style: TextStyle(fontSize: 24),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => AddExpenseScreen()),
                 );
               },
-              child: Text('Add Expense'),
+              child: const Text('Add Expense'),
             ),
             ElevatedButton(
               onPressed: () {
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ViewExpensesScreen()),
                 );
               },
-              child: Text('My Expenses'),
+              child: const Text('My Expenses'),
             ),
           ],
         ),
@@ -120,7 +120,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Expense'),
+        title: const Text('Add Expense'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -130,7 +130,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
             children: <Widget>[
               TextFormField(
                 controller: _titleController,
-                decoration: InputDecoration(labelText: 'Title'),
+                decoration: const InputDecoration(labelText: 'Title'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a title';
@@ -140,7 +140,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               ),
               TextFormField(
                 controller: _typeController,
-                decoration: InputDecoration(labelText: 'Expense Type'),
+                decoration: const InputDecoration(labelText: 'Expense Type'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter an expense type';
@@ -150,7 +150,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               ),
               TextFormField(
                 controller: _descriptionController,
-                decoration: InputDecoration(labelText: 'Description'),
+                decoration: const InputDecoration(labelText: 'Description'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter a description';
@@ -160,7 +160,7 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
               ),
               TextFormField(
                 controller: _amountController,
-                decoration: InputDecoration(labelText: 'Amount'),
+                decoration: const InputDecoration(labelText: 'Amount'),
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -191,30 +191,30 @@ class _AddExpenseScreenState extends State<AddExpenseScreen> {
                           Image.asset('assets/usd.png', width: 24, height: 24),
                         if (value == 'EUR')
                           Image.asset('assets/eur.png', width: 24, height: 24),
-                        SizedBox(width: 8),
+                        const SizedBox(width: 8),
                         Text(value),
                       ],
                     ),
                   );
                 }).toList(),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: <Widget>[
                   Text(
                     'Date: ${DateFormat.yMd().format(_selectedDate)}',
                   ),
-                  SizedBox(width: 20),
+                  const SizedBox(width: 20),
                   ElevatedButton(
                     onPressed: () => _selectDate(context),
-                    child: Text('Select date'),
+                    child: const Text('Select date'),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: _saveExpense,
-                child: Text('Save Expense'),
+                child: const Text('Save Expense'),
               ),
             ],
           ),
@@ -229,7 +229,7 @@ class ViewExpensesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('My Expenses'),
+        title: const Text('My Expenses'),
       ),
       body: ListView.builder(
         itemCount: expenses.length,
@@ -239,7 +239,7 @@ class ViewExpensesScreen extends StatelessWidget {
             title: Text(expense.title),
             subtitle: Text(
               '${expense.type}\n${expense.currency} ${expense.amount.toStringAsFixed(2)} on ${DateFormat.yMd().format(expense.date)}\n${expense.description}',
-              style: TextStyle(height: 1.5),
+              style: const TextStyle(height: 1.5),
             ),
           );
         },
