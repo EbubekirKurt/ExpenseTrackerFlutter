@@ -17,12 +17,12 @@ An Expense Tracker application built using Flutter. This application helps users
 
 To run this project on your local machine, follow these steps:
 
+   ```
 1. **Clone the repository:**
 
    ```bash
    git clone https://github.com/EbubekirKurt/ExpenseTrackerFlutter.git
    ```
-
 2. **Navigate to the project directory:**
 
    ```bash
@@ -68,4 +68,3 @@ For any queries or issues, please contact [Ebubekir Kurt](https://github.com/Ebu
 
 ```
 
-Feel free to modify the content as per your specific requirements and add any additional sections if needed.
