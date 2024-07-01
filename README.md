@@ -1,18 +1,71 @@
-# expensetracker
+Here's a `README.md` file for your ExpenseTrackerFlutter repository:
 
-A new Flutter project.
+```markdown
+# Expense Tracker Flutter
 
-## Getting Started
+An Expense Tracker application built using Flutter. This application helps users to keep track of their daily expenses and manage their budgets efficiently. 
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Add, edit, and delete expenses.
+- Categorize expenses.
+- View expenses by date.
+- Monthly and yearly expense summaries.
+- User-friendly interface.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To run this project on your local machine, follow these steps:
 
-# ExpenseTrackerFlutter
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/EbubekirKurt/ExpenseTrackerFlutter.git
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd ExpenseTrackerFlutter
+   ```
+
+3. **Install the dependencies:**
+
+   ```bash
+   flutter pub get
+   ```
+
+4. **Run the app:**
+
+   ```bash
+   flutter run
+   ```
+
+## Dependencies
+
+- [provider](https://pub.dev/packages/provider) - A wrapper around InheritedWidget to make them easier to use and more reusable.
+- [sqflite](https://pub.dev/packages/sqflite) - SQLite plugin for Flutter. Supports iOS, Android, and MacOS.
+- [intl](https://pub.dev/packages/intl) - Provides internationalization and localization facilities.
+
+## Usage
+
+1. **Home Screen:** View a list of all expenses.
+2. **Add Expense:** Tap the add button to add a new expense. Fill in the details and save.
+3. **Edit/Delete Expense:** Swipe an expense item to reveal edit and delete options.
+4. **Summary:** Navigate to the summary screen to view monthly and yearly summaries.
+
+## Contributing
+
+Contributions are welcome! Please fork this repository and submit a pull request for any enhancements or bug fixes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any queries or issues, please contact [Ebubekir Kurt](https://github.com/EbubekirKurt).
+
+```
+
+Feel free to modify the content as per your specific requirements and add any additional sections if needed.
